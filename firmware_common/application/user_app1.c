@@ -92,7 +92,7 @@ Promises:
 */
 void UserApp1Initialize(void)
 {
-  /* If good initialization, set state to Idle */
+  LedOn(BLUE);
   if( 1 )
   {
     UserApp1_pfStateMachine = UserApp1SM_Idle;
