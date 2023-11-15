@@ -98,6 +98,11 @@ bool InitializeServer(ServerType ** psServer_)
     return (FALSE); //when server cannot be initialized
   //more code to be added
   
+  (*psServer_)->u8ServerNumber = Main_u8Servers;
+  
+  //start with an empty tray
+  for(u8 i = 0; i < U8_MAX_DRINKS; i++)
+    (*psServer_)->asServingTray[i] = EMPTY; //Filling the array with all empty drinks
   return(TRUE);
   
 } /* end InitializeServer() */
