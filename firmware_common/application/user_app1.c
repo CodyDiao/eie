@@ -79,7 +79,7 @@ Function Definitions
 @fn void UserApp1Initialize(void)
 
 @brief
-Initializes the State Machine and its variables.
+Initializes the State Machine and itsariables.
 
 Should only be called once in main init section.
 
@@ -92,6 +92,19 @@ Promises:
 */
 void UserApp1Initialize(void)
 {
+  u8 u8String[] = "A string to print that returns cursor to start of next line.\n\r";
+  u8 u8String2[] = "Here's a number:";
+  u8 u8String3[] = " The 'cursor' was here.";
+  u32 u32Number = 1234567;
+  
+  DebugPrintf(u8String);
+  DebugPrintf(u8String2);
+  DebugPrintNumber(u32Number);
+  DebugPrintf(u8String3);
+  DebugLineFeed();
+  DebugPrintf(u8String3);
+  DebugLineFeed();
+    
   /* If good initialization, set state to Idle */
   if( 1 )
   {
